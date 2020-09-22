@@ -14,6 +14,6 @@ jobs:
         IMAGE_NAME: "story645/repo2docker-test"
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-        MYBINDERORG_CACHE: true
+        BINDER_CACHE: true
         PUBLIC_REGISTRY_CHECK: true
     
