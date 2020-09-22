@@ -3,3 +3,4 @@ matplotlib
 scipy
 ipywidgets
 nbinteract
+IPython
