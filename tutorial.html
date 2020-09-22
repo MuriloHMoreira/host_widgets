@@ -13297,12 +13297,7 @@ div#notebook {
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;f(x)&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-<span class="n">interactive_plot</span> <span class="o">=</span> <span class="n">interactive</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">xsi</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-                                                       <span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-                                                       <span class="nb">max</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
-                                                       <span class="n">step</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
-                                                       <span class="n">description</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\xi$&#39;</span><span class="p">,</span>
-                                                       <span class="n">readout_format</span><span class="o">=</span><span class="s1">&#39;.2f&#39;</span><span class="p">))</span>
+<span class="n">interactive_plot</span> <span class="o">=</span> <span class="n">interactive</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">xsi</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 
 <span class="n">interactive_plot</span>
 </pre></div>
