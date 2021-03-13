@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+<link rel="icon" href="./resources/favicon.png">
+<link rel="stylesheet" href="./css/nbinteract_legacy.css">
+<link rel="stylesheet" href="./css/mooc_theme.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima+Nova">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Proxima Nova", sans-serif}
+</style>
+
+<title>Feedback</title>
+<!-- Loading mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        tagSide: "right"
+      },
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    MathJax.Hub.Register.StartupHook("TeX AMSmath Ready", function () {
+    MathJax.InputJax.TeX.Stack.Item.AMSarray.Augment({
+      clearTag() {
+        if (!this.global.notags) {
+          this.super(arguments).clearTag.call(this);
+        }
+      }
+    });
+  });
+    </script>
+    <!-- End of mathjax configuration -->
+
+<script>
+function overlayHelp(isShow){
+  var elm = document.getElementById('overlayHelp')
+  if (isShow) {
+    elm.style.display = 'block';
+  } else {
+    elm.style.display = 'none';
+  }
+}
+
+function openHelp() {
+  overlayHelp(true);
+  document.getElementById('HelpWindow').style.display = 'block';
+}
+
+function closeHelp() {
+  overlayHelp(false);
+  document.getElementById('HelpWindow').style.display = 'none';
+}
+
+function overlay(isShow){
+  var elm = document.getElementById('overlay')
+  if (isShow) {
+    elm.style.display = 'block';
+  } else {
+    elm.style.display = 'none';
+  }
+}
+
+function openNav() {
+  overlay(true);
+  // document.getElementById('mySidenav').style.width="250px";
+  document.getElementById('mySidenav').classList.add('sidenav_sz_open');
+  document.getElementById('mySidenav').classList.remove('sidenav_sz_close');
+  document.getElementById('sm_arrow').style.color="#111";
+  document.getElementById("notebook").style.marginLeft = "250px";
+  document.body.style.backgroundColor = "white";
+}
+
+function closeNav() {
+  overlay(false);
+  // document.getElementById('mySidenav').style.width="15px"
+  document.getElementById('mySidenav').classList.add('sidenav_sz_close');
+  document.getElementById('mySidenav').classList.remove('sidenav_sz_open');
+  document.getElementById("notebook").style.marginLeft = "0";
+  document.getElementById('sm_arrow').style.color="grey";
+  document.body.style.backgroundColor = "white";
+}
+</script>
+
+<img class="logoGEMM" src="./resources/logo.png" height="60px">
+<img class="logoUFSCar" src="./resources/ufscar.png" height="60px">
+
+
+<!-- Navigation Bar -->
+<div class="topnav">
+  <a class="active" href="index.html"><i class="fa fa-home"></i> Home</a>
+</div>
+
+
+</head>
+<body>
+<div tabindex="-1" id="notebook" class="border-box-sizing"> 
+<div class="container">      
+<style type="text/css">
+  li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+</style>
+<br>
+<h1 style='font-size: 42px' class="nocount"> Feedback, we want to hear from you! </h1>
+<span><iframe src="https://forms.gle/TY2HvXcUKc7Jb6ap8"  scrolling="yes" style="top: 100px; bottom: 0px; right: 0px; width: 100%; border: none;  margin: 0; padding: 0;   overflow: hidden; z-index: 999999; height: 800px;"></iframe></span>
+
+
+  </div>
+  </div>
+</body>

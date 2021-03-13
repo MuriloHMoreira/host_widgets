@@ -1,0 +1,432 @@
+/*=========================== Overrides of notebook CSS for static HTML export ===========================*/
+body {
+  overflow: visible;
+  padding: 0px;
+}
+
+div#notebook {
+  overflow: visible;
+  border-top: none;
+}@media print {
+  div.cell {
+    display: block;
+    page-break-inside: avoid;
+  }
+  div.output_wrapper {
+    display: block;
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
+  }
+}
+.nav-separator {
+  height: 75px;
+}
+@media only screen and (min-width: 768px) {
+  .nav-separator {
+    display: none;
+  }
+}
+.nav-menu__entry a {
+  display: block;
+  margin: 25px 20px;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14pt;
+}
+@media (min-width: 768px) {
+  .nav-menu__entry a {
+    font-size: 18pt;
+    margin: 0;
+    padding: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .nav-menu__entry {
+    float: left;
+  }
+}
+
+/* =============================================== Top Menu =============================================== */
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #222;
+  overflow: hidden;
+  top: 0;
+  z-index: 999;
+  margin: 0;
+  position: fixed;
+  width: 100%;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.topnav a.disabled {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  background-color: grey
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.disabled:hover {
+  color: #f2f2f2;
+  background-color: grey
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: navy;
+  color: white;
+}
+
+.topnav a.active:hover {
+  background-color: lightblue;
+  color: black;
+}
+.topnav a.help {
+  background-color: DarkSeaGreen;
+  float:right;
+  color: white;
+}
+
+.topnav a.help:hover {
+  background-color: SeaGreen;
+  color: black;
+}
+
+.topnav a.feedback {
+  background-color: #167ac6;
+  float:right;
+  color: white;
+}
+
+
+.topnav a.feedback:hover {
+  background-color: #89aac3;
+  color: black;
+}
+
+#overlayIndex{
+    z-index: 2;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+.indexMenu {
+  background-color: #ddd;
+  overflow: hidden;
+  top: 53px;
+  left: 310px;
+  z-index: 999;
+  /*padding-left: 310px;*/
+  position: fixed;
+  width: auto;
+  height: auto;
+}
+.indexMenu.index_sz_open{
+  z-index: 4;
+  height: auto; /* 260 width - change this with JavaScript */
+  overflow-y: auto; /* Disable horizontal scroll */
+}
+.indexMenu.index_sz_close{
+  z-index: 4;
+  width: 0px;
+  height: 0px; /* 250 width - change this with JavaScript */
+  overflow-y: hidden; /* Disable horizontal scroll */
+}
+#overlayIndex{
+  z-index: 2;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  background-color: rgba(0,0,0, .8);
+}
+
+/* ========================================== Side Navigation Menu ========================================== */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  position: fixed; /* Stay in place */
+  z-index:3; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #222; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-y: hidden; /* Disable vertical scroll */
+  padding-top: 50px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  left: 15px;
+  padding: 15px 8px 8px 0px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  margin-left: 15px;
+  width: 170px;
+  z-index: 4;
+}
+.sidenav.sidenav_sz_open{
+  z-index: 4;
+  width: 260px; /* 260 width - change this with JavaScript */
+  overflow-y: auto; /* Disable horizontal scroll */
+}
+.sidenav.sidenav_sz_close{
+  z-index: 4;
+  width: 15px; /* 250 width - change this with JavaScript */
+  overflow-y: hidden; /* Disable horizontal scroll */
+}
+.sidenav.sidenav_sz_close:hover{
+  width: 25px;
+  transition: 0.125s;
+}
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.sidenav .sm_arrow {
+  color: #222;
+  top: 50%;
+  position: absolute;
+  z-index:4;
+  width: 15px;
+  margin-left: -12px;
+  font-size: 18px;
+}
+.sidenav:hover .sm_arrow{
+  width: 25px;
+  margin-left: -2px;
+  transition: 0.125s;
+}
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  padding-top: 50px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 215px;
+  z-index: -1;
+}
+.sidenav .closebtn:hover {
+  width: 25px;
+  transition: 0.125s;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#overlay{
+    z-index: 2;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  @media screen and (max-height: 450px){
+
+    .sidenav{padding-top: 15px;}
+    .sidenav a{font-size: 18px;}
+
+  }
+
+/* ========================================== Help Menu ========================================== */
+
+#overlayHelp{
+  z-index: 2;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  background-color: rgba(0,0,0, .8);
+}
+
+.closebtnHelp {
+  position: absolute;
+  top: 0;
+  padding-top: 0px;
+  right: 3px;
+  font-size: 36px;
+  margin-left: 20px;
+  z-index: -1;
+}
+
+#HelpWindow{
+  z-index: 3;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  line-height: 30px;
+  width: 400px;
+  text-align: center;
+  display: none;
+  z-index: 999999;
+  padding: 20px;
+  background-color: white;
+  border-radius: 0px;
+}
+
+.disabled_nbinteract_button{
+  margin: 0;
+  position: absolute;
+  background: lightskyblue;
+  border-radius: 0px;
+  border: 0px solid grey;
+  font-weight: bold;
+  width: 150px;
+  left: 32%;
+  top: 62%;
+  box-shadow: 2px 2px #888888;
+}
+
+/* ======================================= Remove Bullet Marker ======================================= */
+
+ul.toc-item {
+    list-style-type: none;
+    padding: 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+
+/* =============================================== Logos =============================================== */
+
+.logoGEMM{
+    position:fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 100;
+}
+
+.logoUFSCar{
+    position:fixed;
+    left: 15px;
+    bottom: 15px;
+    z-index: 100;
+}
+
+
+
+/* ============================================= nbinteract ============================================= */
+.cell.nbinteract-left {
+    width: 50%;
+    float: left;
+}
+
+.cell.nbinteract-right {
+    width: 50%;
+    float: right;
+}
+
+.cell.nbinteract-hide_in > .input {
+    display: none;
+}
+
+.cell.nbinteract-hide_out > .output_wrapper {
+    display: none;
+}
+
+.cell:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+div.output_subarea {
+    max-width: initial;
+}
+
+.jp-OutputPrompt {
+    display: none;
+}
+.js-nbinteract-widget {
+  background: lightskyblue;
+  border-radius: 0px;
+  border: 0px solid grey;
+  font-weight: bold;
+  box-shadow: 2px 2px #888888;
+
+}
+
+body {
+    counter-reset: h1counter h2counter h3counter;
+}
+
+h1:before {
+    content: counter(h1counter) ".\0000a0\0000a0";
+    counter-increment: h1counter;
+}
+h1{
+    counter-reset: h2counter;
+    counter-reset: h3counter;
+}
+h2:before {
+    counter-reset: h3counter;
+    counter-increment: h2counter;
+    content: counter(h1counter) "." counter(h2counter) ".\0000a0\0000a0";
+
+}
+h2{
+    counter-reset: h3counter;
+}
+h3:before {
+    counter-increment: h3counter;
+    content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+
+}
+
+h1.nocount:before {
+  content: none;
+  counter-increment: none;
+}
+
+h2.nocount:before {
+  content: none;
+  counter-increment: none;
+}
+
+h3.nocount:before {
+  content: none;
+  counter-increment: none;
+}
