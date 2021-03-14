@@ -171,6 +171,9 @@ menu_script = '''
                   document.getElementById('myIndex').classList.add('index_sz_close');
                   document.getElementById('myIndex').classList.remove('index_sz_open');
                 }
+                window.onload = function(){
+                   document.getElementById('autostart').click();
+}
                 </script>
            '''
 soup.head.append(BeautifulSoup(menu_script))
@@ -183,8 +186,8 @@ menu_html = '''
             <!-- Navigation Bar -->
             <div class="topnav">
               <a class="active" href="index.html"><i class="fa fa-home"></i> Home</a>
-              <a class="disabled"><i class="fa fa-arrow-left"></i>  Previous</a>
-              <a href="#next">Next  <i class="fa fa-arrow-right"></i></a>
+              <a href="./lesson1.html"><i class="fa fa-arrow-left"></i>  Previous</a>
+              <a href="./lesson3.html">Next  <i class="fa fa-arrow-right"></i></a>
               <a href="#index" onclick="openIndex()"><i class="fa fa-list-ol"></i> Table of contents</a>
               <a class="feedback" href="./feedback.html"><i class="fa fa-comments"></i> Feedback</a>
               <a class="help" href="#help" onclick="openHelp()"><i class="fa fa-book"></i> Help</a>

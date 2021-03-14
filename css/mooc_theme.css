@@ -7,6 +7,8 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
+  margin-left: 250px;
+  transition: 0.5s; 
 }@media print {
   div.cell {
     display: block;
@@ -429,4 +431,14 @@ h2.nocount:before {
 h3.nocount:before {
   content: none;
   counter-increment: none;
+}
+
+/*span.mtd {
+  text-decoration: none;
+  position: relative;
+  margin-top: -70px;
+  }*/
+
+.MathJax_Display {
+position: relative;
 }
