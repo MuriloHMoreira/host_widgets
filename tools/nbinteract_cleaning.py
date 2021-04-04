@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup, Comment
 # Loading the html page
-soup = BeautifulSoup(open('../lesson_2_raw.html'), "html.parser")
+soup = BeautifulSoup(open('./aula_weibull_raw.html'), "html.parser")
 
 # Remove all script (incomplete native mathjax config)
 for s in soup.head.select('script'):
