@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="./css/nbinteract_legacy.css">
 <link rel="stylesheet" href="./css/mooc_theme.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima+Nova">
+<link href="./css/all.css" rel="stylesheet">
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Proxima Nova", sans-serif}
 </style>
@@ -137,12 +138,12 @@ window.onload = function(){
 
 <!-- Navigation Bar -->
 <div class="topnav">
-  <a class="active" href="index.html"><i class="fa fa-home"></i> Home</a>
-  <a class="disabled"><i class="fa fa-arrow-left"></i>  Previous</a>
-  <a href="./lesson_2.html">Next  <i class="fa fa-arrow-right"></i></a>
-  <a href="#index" onclick="openIndex()"><i class="fa fa-list-ol"></i> Table of contents</a>
-  <a class="feedback" href="./feedback.html"><i class="fa fa-comments"></i> Feedback</a>
-  <a class="help" href="#help" onclick="openHelp()"><i class="fa fa-book"></i> Help</a>
+  <a class="active" href="index.html"><i class="fas fa-home"></i> Home</a>
+  <a class="disabled"><i class="fas fa-arrow-left"></i>  Previous</a>
+  <a href="./lesson_2.html">Next  <i class="fas fa-arrow-right"></i></a>
+  <a href="#index" onclick="openIndex()"><i class="fas fa-list-ol"></i> Table of contents</a>
+  <a class="feedback" href="./feedback.html"><i class="fas fa-comments"></i> Feedback</a>
+  <a class="help" href="#help" onclick="openHelp()"><i class="fas fa-book"></i> Help</a>
 </div>
 
 <div id="myIndex" class="indexMenu index_sz_close">
@@ -155,7 +156,7 @@ window.onload = function(){
 <!-- Navigation Side Menu -->
 <div id="mySidenav" class="sidenav sidenav_sz_open" onclick="openNav()">
   <a id="sm_arrow" href="#" class="sm_arrow" >❯</a>
-  <a><i class="fa fa-list"></i>  &nbsp;&nbsp; Index of Lessons</a>
+  <a><i class="fas fa-list"></i>  &nbsp;&nbsp; Index of Lessons</a>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <ol>
   <li style='font-size: 14px; color:#818181; font-weight: bold'><a href='./lesson_1.html'><b>Theoretical Stregth and Stress Concentrations</a></b></li>
@@ -199,7 +200,7 @@ window.onload = function(){
 
 
 
-  <div class="cell text_cell">
+  <div class="cell text_cell" style="height: 30px; visibility: hidden;">
     <button class="js-nbinteract-widget">
       Loading widgets...
     </button>

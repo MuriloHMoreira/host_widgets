@@ -87,7 +87,7 @@ mathjax = '''
                 </script>
                 <!-- End of mathjax configuration -->
            '''
-soup.head.append(BeautifulSoup(mathjax, features='lxml'))
+soup.head.append(BeautifulSoup(mathjax))
 
 # Insert the menus script
 menu_script = '''
@@ -176,7 +176,7 @@ menu_script = '''
 }
                 </script>
            '''
-soup.head.append(BeautifulSoup(menu_script, features='lxml'))
+soup.head.append(BeautifulSoup(menu_script))
 
 # Menu Html
 menu_html = '''
@@ -239,9 +239,8 @@ menu_html = '''
             <a href="mailto:moreira.murilo@gmail.com">Murilo Henrique Moreira</a>
             </div>
             '''
-soup.head.append(BeautifulSoup(menu_html, features='lxml'))
+soup.head.append(BeautifulSoup(menu_html))
 
-print('Done')
 # Write the lesson to html
-with open("./lesson_2.html", "w",  encoding="utf-8") as file:
+with open("../lesson_2.html", "w",  encoding="utf-8") as file:
     file.write(str(soup).replace('×', '&times;').replace('  ', '&nbsp;&nbsp;').replace('â†©', '↩'))
