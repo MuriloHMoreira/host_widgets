@@ -173,7 +173,7 @@
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Esta lista de exerícios tem como foco garantir que os objetivos principais da aula sobre estatística de Weibull foram alcançados e para fornecer desafios que levem a visualização e a prática dos conceitos passados. Para tanto, tomemos um ensaio de tração (clique em "Show Widgets" caso não tenha carregado):</p>
+<p>Esta lista de exerícios tem como foco garantir que os objetivos principais da aula sobre estatística de Weibull foram alcançados e para fornecer desafios que levem a visualização e a prática dos conceitos passados. Para tanto, tomemos um ensaio de tração:</p>
 
 </div>
 </div>
@@ -303,13 +303,13 @@
 <blockquote><ol>
 <li><p>Realize os ensaios de tração para o Material 1 e o Material 2 (arraste o slider para a direita, ampliando a deformação - e consequentemente a tensão. <strong>Importante: lembre-se que na realidade, ensaios de tração em materiais cerâmicos são inviáveis!</strong>). Ao final do ensaio, será apresentado uma tabela com os valores de tensão de falha, $\sigma_f^{tr}$, de cada amostra. Calcule o valor de módulo de Weibull, $m$, para cada um dos materiais.</p>
 </li>
-<li><p>Quais parâmetros de processamento poderiam justificar a diferença entre o Material 1 e 2?</p>
+<li><p>Sabe-se que os Materias 1 e 2 foram obtidos por diferentes rotas de processamento, um por prensagem isostática e o outro por colagem de barbotina. Indique qual foi a rota de processamento mais provável para cada um e elucide hipóteses que justifiquem sua escolha.</p>
 </li>
 <li><p>Com base nas relações discutidas em sala de aula, converta os resultados do ensaio de tração, $\sigma_f^{tr}$, para flexão três pontos, $\sigma_f^{3pt}$ e calcule as razões  $\frac{\sigma_f^{3pt}}{\sigma_f^{tr}}$. Em qual material a diferença é maior? Por que?</p>
 </li>
 <li><p>Você poderia inferir qual destes materiais teria uma maior tenacidade a fratura? Por que?</p>
 </li>
-<li>O que acontece com o efeito do volume sobre a tensão de fratura com a redução do módulo de Weibull? Justifique. E o efeito do ensaio? Estes efeitos são correlatos? Implique uma consequência prática destes comportamentos no cenário industrial.</li>
+<li>Suponha que você precisa escolher entre estas opções de materiais para uma blindagem de um veículo para uma expedição em Marte. Qual você escolheria e porque? Como você melhoraria a tensão de ruptura do material mais fraco? E como aumentaria o módulo de Weibull do material com resultados mais dispersos?</li>
 </ol>
 </blockquote>
 
@@ -330,7 +330,7 @@
 <span class="c1">#nbi:left</span>
 <span class="n">m_1</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">E</span> <span class="o">=</span> <span class="mf">400e9</span>
-<span class="n">sigma_0</span> <span class="o">=</span> <span class="mf">20e6</span>
+<span class="n">sigma_0</span> <span class="o">=</span> <span class="mf">75e6</span>
 <span class="n">sigma_f_1_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">weibull</span><span class="p">(</span><span class="n">m_1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">sigma_0</span>
 <span class="n">sigma_f_1_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">weibull</span><span class="p">(</span><span class="n">m_1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">sigma_0</span>
 <span class="n">sigma_f_1_3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">weibull</span><span class="p">(</span><span class="n">m_1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">sigma_0</span>
@@ -385,8 +385,8 @@
         <span class="n">ytable</span><span class="o">.</span><span class="n">set_fontsize</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
         <span class="n">ytable</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
         
-    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.125e-3</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5e-3</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Tensão, $\sigma$ [MPa]&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Deformação, $\epsilon$ [%]&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
@@ -397,7 +397,7 @@
 <span class="c1">#                        epsilon_i=(0, 1e-4, 0.1e-5),</span>
                          <span class="n">epsilon_i_per</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
                                                        <span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-                                                       <span class="nb">max</span><span class="o">=</span><span class="mf">1e-2</span><span class="p">,</span>
+                                                       <span class="nb">max</span><span class="o">=</span><span class="mf">5e-2</span><span class="p">,</span>
                                                        <span class="n">step</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">,</span>
                                                        <span class="n">description</span><span class="o">=</span><span class="s1">&#39;𝜖 &#39;</span><span class="p">,</span>
                                                        <span class="n">readout_format</span><span class="o">=</span><span class="s1">&#39;.2e&#39;</span><span class="p">)</span>
@@ -453,7 +453,7 @@
 <span class="c1">#nbi:left</span>
 <span class="n">m_2</span> <span class="o">=</span> <span class="mi">15</span>
 <span class="n">E</span> <span class="o">=</span> <span class="mf">400e9</span>
-<span class="n">sigma_0</span> <span class="o">=</span> <span class="mf">20e6</span>
+<span class="n">sigma_0</span> <span class="o">=</span> <span class="mf">50e6</span>
 <span class="n">sigma_f_2_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">weibull</span><span class="p">(</span><span class="n">m_2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">sigma_0</span>
 <span class="n">sigma_f_2_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">weibull</span><span class="p">(</span><span class="n">m_2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">sigma_0</span>
 <span class="n">sigma_f_2_3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">weibull</span><span class="p">(</span><span class="n">m_2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">sigma_0</span>
@@ -510,8 +510,8 @@
         <span class="n">ytable</span><span class="o">.</span><span class="n">set_fontsize</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
         <span class="n">ytable</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
         
-    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.125e-3</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5e-3</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Tensão, $\sigma$ [MPa]&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Deformação, $\epsilon$ [%]&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
@@ -522,7 +522,7 @@
 <span class="c1">#                        epsilon_i=(0, 1e-4, 0.1e-5),</span>
                          <span class="n">epsilon_i_per</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
                                                        <span class="nb">min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-                                                       <span class="nb">max</span><span class="o">=</span><span class="mf">1e-2</span><span class="p">,</span>
+                                                       <span class="nb">max</span><span class="o">=</span><span class="mf">5e-2</span><span class="p">,</span>
                                                        <span class="n">step</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">,</span>
                                                        <span class="n">description</span><span class="o">=</span><span class="s1">&#39;𝜖&#39;</span><span class="p">,</span>
                                                        <span class="n">readout_format</span><span class="o">=</span><span class="s1">&#39;.2e&#39;</span><span class="p">)</span>
@@ -608,6 +608,23 @@
 
 </div>
 
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
 </div>
 </div>
 
