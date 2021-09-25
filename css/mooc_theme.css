@@ -128,6 +128,18 @@ div#notebook {
   color: black;
 }
 
+.topnav a.recording {
+  background-color: #A3E8F2;
+  float: right;
+  color: black;
+}
+
+
+.topnav a.recording:hover {
+  background-color: #6F9EA5;
+  color: white;
+}
+
 #overlayIndex{
     z-index: 2;
     position: fixed;
@@ -431,6 +443,12 @@ h2.nocount:before {
 h3.nocount:before {
   content: none;
   counter-increment: none;
+}
+
+.anchor_target{
+  color: blue;
+  position: relative;
+  top: -55px;
 }
 
 /*span.mtd {
