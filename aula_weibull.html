@@ -131,6 +131,11 @@
                 window.onload = function(){
                   document.getElementById('autostart').click();
                 }
+
+                function registerFirstVisit() {
+                  localStorage.setItem("alreadyVisit", "yes");
+                }
+
                 </script>
 </head></html><!-- Adding Logo --><html><body><img class="logoGEMM" src="./resources/logo.png" width="80px"/>
 <!-- Navigation Bar -->
@@ -302,6 +307,10 @@
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+
+
+<button onclick="registerFirstVisit()">Click me</button>
+
 <h1 class="nocount" id="Estat&#237;stica-de-Weibull---Uma-Ferramenta-de-Convers&#227;o-e-Compara&#231;&#227;o-de-Comportamentos-Mec&#226;nicos">Estat&#237;stica de Weibull - Uma Ferramenta de Convers&#227;o e Compara&#231;&#227;o de Comportamentos Mec&#226;nicos</h1>
 </div>
 </div>
@@ -4347,10 +4356,9 @@ $$\sigma_{f, t} = \left[2(m+1)^{2}\right]^{-\frac{1}{m}} \ \sigma_{f, 3 pt}$$$$\
 
 
 
-
-
 <!-- Loads nbinteract package -->
-<script src="https://unpkg.com/nbinteract-core-local" async></script>
+<!-- If RUNNING LOCAL SERVER: -->
+<!-- <script src="https://unpkg.com/nbinteract-core-local" async></script>
 <script>
   (function setupNbinteract() {
     // If NbInteract hasn't loaded, wait one second and try again
@@ -4367,7 +4375,30 @@ $$\sigma_{f, t} = \left[2(m+1)^{2}\right]^{-\frac{1}{m}} \ \sigma_{f, 3 pt}$$$$\
 
     window.interact = interact
   })()
+</script> -->
+
+
+<!-- If RUNNING JUPYTERHUB SERVER: -->
+<script src="https://unpkg.com/nbinteract-core" async></script>
+<script>
+  (function setupNbinteract() {
+    // If NbInteract hasn't loaded, wait one second and try again
+    if (window.NbInteract === undefined) {
+      setTimeout(setupNbinteract, 1000)
+      return
+    }
+
+    var interact = new window.NbInteract({
+      spec: 'murilohmoreira/host_widgets/master',
+      baseUrl: 'https://mybinder.org',
+      provider: 'gh',
+    })
+    interact.prepare()
+
+    window.interact = interact
+  })()
 </script>
+
     </div>
   </div>
 

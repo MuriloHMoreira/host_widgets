@@ -621,6 +621,28 @@ Suponha que você precisa escolher entre estas opções de materiais para uma bl
 
   
 <!-- Loads nbinteract package -->
+<!-- If RUNNING LOCAL SERVER: -->
+<!-- <script src="https://unpkg.com/nbinteract-core-local" async></script>
+<script>
+  (function setupNbinteract() {
+    // If NbInteract hasn't loaded, wait one second and try again
+    if (window.NbInteract === undefined) {
+      setTimeout(setupNbinteract, 1000)
+      return
+    }
+
+    var interact = new window.NbInteract({
+      nbUrl: 'http://200.136.213.211:8888/',
+
+    })
+    interact.prepare()
+
+    window.interact = interact
+  })()
+</script> -->
+
+
+<!-- If RUNNING JUPYTERHUB SERVER: -->
 <script src="https://unpkg.com/nbinteract-core" async></script>
 <script>
   (function setupNbinteract() {

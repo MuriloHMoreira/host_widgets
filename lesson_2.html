@@ -18991,7 +18991,9 @@ z
 </div>
 </div>
 
-<script async="" src="https://unpkg.com/nbinteract-core-local"></script>
+<!-- Loads nbinteract package -->
+<!-- If RUNNING LOCAL SERVER: -->
+<!-- <script src="https://unpkg.com/nbinteract-core-local" async></script>
 <script>
   (function setupNbinteract() {
     // If NbInteract hasn't loaded, wait one second and try again
@@ -19008,7 +19010,31 @@ z
 
     window.interact = interact
   })()
+</script> -->
+
+
+<!-- If RUNNING JUPYTERHUB SERVER: -->
+<script src="https://unpkg.com/nbinteract-core" async></script>
+<script>
+  (function setupNbinteract() {
+    // If NbInteract hasn't loaded, wait one second and try again
+    if (window.NbInteract === undefined) {
+      setTimeout(setupNbinteract, 1000)
+      return
+    }
+
+    var interact = new window.NbInteract({
+      spec: 'murilohmoreira/host_widgets/master',
+      baseUrl: 'https://mybinder.org',
+      provider: 'gh',
+    })
+    interact.prepare()
+
+    window.interact = interact
+  })()
 </script>
+
+
 </div>
 </div>
 </body>
