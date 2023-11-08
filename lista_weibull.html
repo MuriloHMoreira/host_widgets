@@ -622,7 +622,7 @@ Suponha que você precisa escolher entre estas opções de materiais para uma bl
   
 <!-- Loads nbinteract package -->
 <!-- If RUNNING LOCAL SERVER: -->
-<script src="https://unpkg.com/nbinteract-core" async></script>
+<script src="https://unpkg.com/nbinteract-core-local" async></script>
 <script>
   (function setupNbinteract() {
     // If NbInteract hasn't loaded, wait one second and try again
@@ -632,7 +632,7 @@ Suponha que você precisa escolher entre estas opções de materiais para uma bl
     }
 
     var interact = new window.NbInteract({
-      nbUrl: 'https://200.136.213.211:8888/',
+      nbUrl: 'http://200.136.213.211:8888/',
 
     })
     interact.prepare()
