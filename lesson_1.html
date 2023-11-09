@@ -2068,7 +2068,7 @@ K_t = \left(1 + 2 \sqrt{\dfrac{c}{\rho}} \right)
 
 
 <!-- Loads nbinteract package -->
-<script src="https://unpkg.com/nbinteract-core-local" async></script>
+<script src="https://unpkg.com/nbinteract-core" async></script>
 <script>
   (function setupNbinteract() {
     // If NbInteract hasn't loaded, wait one second and try again
@@ -2078,7 +2078,7 @@ K_t = \left(1 + 2 \sqrt{\dfrac{c}{\rho}} \right)
     }
 
     var interact = new window.NbInteract({
-      nbUrl: 'http://200.136.213.211:8888/',
+      nbUrl: 'https://gemm-alcoa.duckdns.org/',
 
     })
     interact.prepare()
@@ -2086,6 +2086,28 @@ K_t = \left(1 + 2 \sqrt{\dfrac{c}{\rho}} \right)
     window.interact = interact
   })()
 </script>
+
+
+<!-- If RUNNING JUPYTERHUB SERVER: -->
+<!-- 
+<script>
+  (function setupNbinteract() {
+    // If NbInteract hasn't loaded, wait one second and try again
+    if (window.NbInteract === undefined) {
+      setTimeout(setupNbinteract, 1000)
+      return
+    }
+
+    var interact = new window.NbInteract({
+      spec: 'murilohmoreira/host_widgets/master',
+      baseUrl: 'https://mybinder.org',
+      provider: 'gh',
+    })
+    interact.prepare()
+
+    window.interact = interact
+  })()
+</script> -->
     </div>
   </div>
 </body>

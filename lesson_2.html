@@ -18991,9 +18991,9 @@ z
 </div>
 </div>
 
+
 <!-- Loads nbinteract package -->
-<!-- If RUNNING LOCAL SERVER: -->
-<!-- <script src="https://unpkg.com/nbinteract-core-local" async></script>
+<script src="https://unpkg.com/nbinteract-core" async></script>
 <script>
   (function setupNbinteract() {
     // If NbInteract hasn't loaded, wait one second and try again
@@ -19003,18 +19003,18 @@ z
     }
 
     var interact = new window.NbInteract({
-      nbUrl: 'http://200.136.213.211:8888/',
+      nbUrl: 'https://gemm-alcoa.duckdns.org/',
 
     })
     interact.prepare()
 
     window.interact = interact
   })()
-</script> -->
+</script>
 
 
 <!-- If RUNNING JUPYTERHUB SERVER: -->
-<script src="https://unpkg.com/nbinteract-core" async></script>
+<!-- 
 <script>
   (function setupNbinteract() {
     // If NbInteract hasn't loaded, wait one second and try again
@@ -19032,7 +19032,7 @@ z
 
     window.interact = interact
   })()
-</script>
+</script> -->
 
 
 </div>
