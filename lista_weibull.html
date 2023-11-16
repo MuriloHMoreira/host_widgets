@@ -300,22 +300,25 @@
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Questões:</p>
+<!-- <p>Questões:</p> -->
 <blockquote><ol>
-<li><p>
-  Realize os ensaios de tração para o Material 1 e o Material 2 (arraste o slider para a direita, ampliando a deformação - e consequentemente a tensão). Ao final do ensaio, será apresentado uma tabela com os valores de tensão de falha, $\sigma_f^{tr}$, de cada amostra. Calcule o valor de módulo de Weibull, m, para cada um dos materiais.</p>
+<p>
+  Realize os ensaios de tração para o Material 1 e o Material 2 (arraste o slider para a direita, ampliando a deformação - e consequentemente a tensão). Ao final do ensaio, será apresentada uma tabela com os valores de tensão de falha, $\sigma_f^{tr}$, de cada amostra. Calcule o valor de módulo de Weibull, m, para cada um dos materiais.</p>
+
+<!-- <li><p>
+  Sabe-se que os Materiais 1 e 2 foram obtidos por diferentes rotas de processamento, um por prensagem isostática a quente e o outro por prensagem uniaxial seguido de queima. Indique qual foi a rota de processamento mais provável para cada um e elucide hipóteses que justifiquem sua escolha.</p>
 </li>
 <li><p>
-  Sabe-se que os Materiais 1 e 2 foram obtidos por diferentes rotas de processamento, um por prensagem isostática e o outro por colagem de barbotina. Indique qual foi a rota de processamento mais provável para cada um e elucide hipóteses que justifiquem sua escolha.</p>
+  Considere que você usará estes materiais para construir uma ponte. Com base no valor médio da resistência mecânica em tração destes dois corpos, qual seria a máxima carga aplicada em um ponto no meio da ponte? Em qual material a diferença entre o limite de carga das pontes e o valor de resistência mecânica em tração é maior? Porquê?</p>
 </li>
 <li><p>
-  Com base nas relações discutidas em sala de aula, converta os resultados do ensaio de tração, $\sigma_f^{tr}$, para flexão três pontos, $\sigma_f^{3pt}$ e calcule as razões $\frac{\sigma_f^{3pt}}{\sigma_f^{tr}}$. Em qual material a diferença é maior? Por quê?
+  Você poderia inferir qual destes materiais teria uma maior tenacidade a fratura? Porquê?
 </p>
 </li>
-<li><p>Você poderia inferir qual destes materiais teria uma maior tenacidade a fratura? Por quê?</p>
+<li><p>Suponha agora que você precisa escolher entre estas opções de materiais para uma blindagem de um veículo para uma expedição em Marte. Qual você escolheria e porquê? Como você melhoraria a tensão de ruptura do material mais fraco? Adicionalmente, como aumentaria o módulo de Weibull do material com resultados mais dispersos?</p>
 </li>
 <li><p>
-Suponha que você precisa escolher entre estas opções de materiais para uma blindagem de um veículo para uma expedição em Marte. Qual você escolheria e por quê? Como você melhoraria a tensão de ruptura do material mais fraco? Adicionalmente, como aumentaria o módulo de Weibull do material com resultados mais dispersos?</p></li>
+Suponha que você irá manufaturar em grande escala este veículo. Com base nos valores de resistência do material que escolheu, qual seria o valor de resistência mecânica que colocaria no datasheet de seu veículo?</p></li> -->
 </ol>
 </blockquote>
 
@@ -396,7 +399,7 @@ Suponha que você precisa escolher entre estas opções de materiais para uma bl
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Tensão, $\sigma$ [MPa]&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Deformação, $\epsilon$ [%]&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(fontsize=14)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="n">int_plot_1</span> <span class="o">=</span> <span class="n">interactive</span><span class="p">(</span><span class="n">f_1</span><span class="p">,</span>
@@ -521,7 +524,7 @@ Suponha que você precisa escolher entre estas opções de materiais para uma bl
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Tensão, $\sigma$ [MPa]&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Deformação, $\epsilon$ [%]&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(fontsize=14)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="n">int_plot_2</span> <span class="o">=</span> <span class="n">interactive</span><span class="p">(</span><span class="n">f_2</span><span class="p">,</span>
