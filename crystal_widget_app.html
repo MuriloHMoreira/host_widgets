@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&amp;display=swap">
 
 
 <title>FCC Visualization Widget</title>
@@ -12,6 +13,7 @@
 body {
   overflow: visible;
   padding: 8px;
+  font-family: 'IBM Plex Mono';
 }
 
 div#notebook {
@@ -89,7 +91,7 @@ div#notebook {
             display: none;
         }
     </style></head>
-<body style="background: rgb(255,254,238);">
+<body style="background: rgb(255,254,238); font-family: 'IBM Plex Mono'">
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container">
       
@@ -103,6 +105,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#HIDDEN</span>
+<span class="kn">%matplotlib inline</span>
 <span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">IFrame</span>
 
