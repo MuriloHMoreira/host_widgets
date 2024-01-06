@@ -32,5 +32,16 @@
 </dc:creator>
 </item>
 
+<item>
+<title>
+<![CDATA[ Test Blog ]]>
+</title>
+<link>https://murilohmoreira.github.io/lesson_1.html</link>
+<guid isPermaLink="false">447dcc3b5cfcdb0b13936035eascf5df</guid>
+<dc:creator>
+<![CDATA[ murilohmoreira.github.io ]]>
+</dc:creator>
+</item>
+
 </channel>
 </rss>
