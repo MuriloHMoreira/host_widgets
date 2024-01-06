@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+<channel>
+
+<title><![CDATA[TMPC - MOOC]]>
+</title><description><![CDATA[TMPC - MOOC]]></description><link>https://murilohmoreira.github.io/host_widgets/index.html</link><image><url>https://murilohmoreira.github.io/resources/favicon.png</url>
+<title>TMPC - MOOC</title>
+<link>https://murilohmoreira.github.io/host_widgets/index.html</link>
+</image><generator>https://rss.app</generator><lastBuildDate>Sat, 06 Jan 2024 00:57:17 GMT</lastBuildDate>
+
+<atom:link href="https://rss.app/feeds/pJ35t7JjBtWmb4nb.xml" rel="self" type="application/rss+xml"/>
+<language><![CDATA[en]]></language>
+
+<item><title><![CDATA[Theoretical Stregth and Stress Concentrations]]>
+</title><link>https://murilohmoreira.github.io/lesson_1.html</link>
+<guid isPermaLink="false">2267e643d18753bcd499d16e19619c09</guid><dc:creator>
+<![CDATA[murilohmoreira.github.io]]></dc:creator></item>
+
+<item><title><![CDATA[Irwin Failure Criteria and Fracture Toughness]]></title>
+<link>https://murilohmoreira.github.io/lesson_2.html</link>
+<guid isPermaLink="false">759d181cd833e1c4c74ff9bac5d0315f</guid><dc:creator>
+<![CDATA[murilohmoreira.github.io]]></dc:creator></item>
+
+</channel>
+</rss>
