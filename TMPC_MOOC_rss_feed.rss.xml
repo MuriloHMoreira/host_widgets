@@ -6,7 +6,7 @@
 </title><description><![CDATA[TMPC - MOOC]]></description><link>https://murilohmoreira.github.io/host_widgets/index.html</link><image><url>https://murilohmoreira.github.io/resources/favicon.png</url>
 <title>TMPC - MOOC</title>
 <link>https://murilohmoreira.github.io/host_widgets/index.html</link>
-</image><generator>https://rss.app</generator><lastBuildDate>Sun, 07 Jan 2024 06:57:17 GMT</lastBuildDate>
+</image><generator>https://rss.app</generator><lastBuildDate>Mon, 08 Jan 2024 18:26:17 GMT</lastBuildDate>
 
 <atom:link href="https://murilohmoreira.github.io/host_widgets/TMPC_MOOC_rss_feed.rss.xml" rel="self" type="application/rss+xml"/>
 <language><![CDATA[en]]></language>
@@ -18,42 +18,9 @@
 
 <item><title><![CDATA[Irwin Failure Criteria and Fracture Toughness]]></title>
 <link>https://murilohmoreira.github.io/host_widgets/lesson_2.html</link>
-<guid isPermaLink="false">2267e643d18753bcd489d16e19619c09</guid><dc:creator>
+<guid isPermaLink="false">1e2mldsalcklnfoasjdloanoncxfoosf</guid><dc:creator>
 <![CDATA[murilohmoreira.github.io]]></dc:creator></item>
 
-<item>
-<title>
-<![CDATA[ Aluminum Oxide - Production, Phases, Properties and Selection ]]>
-</title>
-<link>https://murilohmoreira.github.io/host_widgets/lesson_3.html</link>
-<guid isPermaLink="false">447dcc3b5cfcdb0b13936035eeecf5df</guid>
-<dc:creator>
-<![CDATA[ murilohmoreira.github.io ]]>
-</dc:creator>
-</item>
-
-<item>
-<title>
-<![CDATA[ Test Blog ]]>
-</title>
-<link>https://murilohmoreira.github.io/host_widgets/lesson_1.html</link>
-<guid isPermaLink="false">447dcc3b5cfcdb0b13936035eascf5add</guid>
-<dc:creator>
-<![CDATA[ murilohmoreira.github.io ]]>
-</dc:creator>
-</item>
-
-
-<item>
-<title>
-<![CDATA[ C'mon mail chimp! ]]>
-</title>
-<link>https://murilohmoreira.github.io/lesson_4.html</link>
-<guid isPermaLink="false">447dcc3b5cfcdb0b13936035fecf5df</guid>
-<dc:creator>
-<![CDATA[ murilohmoreira.github.io ]]>
-</dc:creator>
-</item>
 
 </channel>
 </rss>
