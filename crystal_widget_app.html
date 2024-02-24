@@ -6,7 +6,11 @@
 
 <title>FCC Visualization Widget</title>
 
-
+<script>   
+    window.onload = function(){
+    document.getElementById('autostart').click();
+}
+</script>
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
@@ -228,7 +232,7 @@ div#notebook {
 
 
   <div class="output_subarea output_widget_view output_execute_result">
-    <button class="js-nbinteract-widget">
+    <button id="autostart" class="js-nbinteract-widget">
       Loading widgets...
     </button>
   </div>
