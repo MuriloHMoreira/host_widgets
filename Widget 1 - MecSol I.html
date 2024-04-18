@@ -13372,9 +13372,6 @@ div#notebook {
 <span class="n">interactive_plot</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">interactive</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">theta</span><span class="o">=</span><span class="n">theta_slider</span><span class="p">,</span> <span class="n">P</span><span class="o">=</span><span class="n">P_slider</span><span class="p">)</span>
 
 <span class="c1"># theta_slider.layout = widgets.Layout(width=&#39;445px&#39;)</span>
-<span class="n">stress_tensor_results</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">flex_flow</span><span class="o">=</span><span class="s1">&#39;column&#39;</span><span class="p">,</span>
-                                      <span class="n">align_content</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span>
-                                      <span class="n">justify_content</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
 
 <span class="n">output</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">interactive_plot</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
                       <span class="n">theta_slider</span><span class="p">,</span> <span class="n">P_slider</span><span class="p">])</span>
