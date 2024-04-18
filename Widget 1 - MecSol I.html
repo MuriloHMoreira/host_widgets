@@ -13104,6 +13104,8 @@ div#notebook {
         }
     </style></head>
 <body>
+  <h1 style="margin-left: 5%;">Widget Para Visualização das Tensões em um Plano Oblíquo:</h1>
+
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container">
       
@@ -13315,6 +13317,12 @@ div#notebook {
 
     <span class="n">ax2</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">mpl</span><span class="o">.</span><span class="n">patches</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">((</span><span class="o">-</span><span class="mf">0.15</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.15</span><span class="p">),</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;orangered&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.75</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span>
                                               <span class="n">transform</span><span class="o">=</span><span class="n">mpl</span><span class="o">.</span><span class="n">transforms</span><span class="o">.</span><span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">rotate_deg_around</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">theta</span><span class="p">)</span> <span class="o">+</span> <span class="n">ax2</span><span class="o">.</span><span class="n">transData</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">theta</span> <span class="o">&lt;</span> <span class="mf">0.3</span><span class="p">:</span>
+        <span class="n">theta</span> <span class="o">=</span> <span class="mf">0.2</span>
+    <span class="k">elif</span> <span class="n">theta</span> <span class="o">&gt;</span> <span class="mf">89.7</span><span class="p">:</span>
+        <span class="n">theta</span> <span class="o">=</span> <span class="mf">89.8</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">pass</span>
     <span class="n">ax2</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mf">0.18</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.15</span> <span class="o">*</span> <span class="n">tau_xy</span> <span class="o">/</span> <span class="n">tau_xy_max</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="mf">0.3</span> <span class="o">-</span> <span class="mf">0.045</span><span class="p">)</span> <span class="o">*</span> <span class="n">tau_xy</span> <span class="o">/</span> <span class="n">tau_xy_max</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">0.03</span><span class="p">,</span> <span class="n">head_length</span><span class="o">=</span><span class="mf">0.045</span> <span class="o">*</span> <span class="n">tau_xy</span> <span class="o">/</span> <span class="n">tau_xy_max</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;orangered&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;orangered&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.005</span><span class="p">,</span>
              <span class="n">transform</span><span class="o">=</span><span class="n">mpl</span><span class="o">.</span><span class="n">transforms</span><span class="o">.</span><span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">rotate_deg_around</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="n">theta</span><span class="p">)</span> <span class="o">+</span> <span class="n">ax2</span><span class="o">.</span><span class="n">transData</span><span class="p">)</span>
     <span class="n">ax2</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="o">-</span><span class="mf">0.18</span><span class="p">,</span> <span class="mf">0.15</span> <span class="o">*</span> <span class="n">tau_xy</span> <span class="o">/</span> <span class="n">tau_xy_max</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.3</span> <span class="o">+</span> <span class="mf">0.045</span><span class="p">)</span> <span class="o">*</span> <span class="n">tau_xy</span> <span class="o">/</span> <span class="n">tau_xy_max</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">0.03</span><span class="p">,</span> <span class="n">head_length</span><span class="o">=</span><span class="mf">0.045</span> <span class="o">*</span> <span class="n">tau_xy</span> <span class="o">/</span> <span class="n">tau_xy_max</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;orangered&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;orangered&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.005</span><span class="p">,</span>
@@ -13373,6 +13381,7 @@ div#notebook {
 
 <span class="c1"># theta_slider.layout = widgets.Layout(width=&#39;445px&#39;)</span>
 
+
 <span class="n">output</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">interactive_plot</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
                       <span class="n">theta_slider</span><span class="p">,</span> <span class="n">P_slider</span><span class="p">])</span>
 <span class="n">output</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">display</span><span class="o">=</span><span class="s1">&#39;flex&#39;</span><span class="p">,</span>
@@ -13413,8 +13422,10 @@ div#notebook {
   </div>
 
   
+
+
+
 <div>
-  <h1>Widget Para Visualização das Tensões em um Plano Oblíquo:</h1>
   <p>a) Representação esquemática de um corpo em tração uniaxial pura.</p>
   <p>b) Representação do estado de tensões ao redor de um ponto no plano oblíquo.</p>
   <p>c) Resultados da i) tensão trativa, <span style="color: orangered">$\sigma_p^\theta$</span>, e cisalhante, <span style="color: orangered">$\theta_p^\theta$</span>, ao plano oblíquo; ii) do  <span style="color: orangered">$\sigma_{i \ j}^\theta$</span>  do tensor de tensões no plano oblíquo perpendicular ao corpo (em vermelho) e iii) do tensor de tensões na seção perpendicular ao corpo (em preto), $\sigma_{i \ j}.</p>
