@@ -13431,6 +13431,7 @@ div#notebook {
   <p>a) Representação esquemática de um corpo em tração uniaxial pura.</p>
   <p>b) Representação do estado de tensões ao redor de um ponto no plano oblíquo.</p>
   <p>c) Resultados da i) tensão trativa, <span style="color: orangered">$\sigma_p^\theta$</span>, e cisalhante, <span style="color: orangered">$\theta_p^\theta$</span>, ao plano oblíquo; ii) do  <span style="color: orangered">$\sigma_{i \ j}^\theta$</span>  do tensor de tensões no plano oblíquo perpendicular ao corpo (em vermelho) e iii) do tensor de tensões na seção perpendicular ao corpo (em preto), $\sigma_{i \ j}$.</p>
+  <p><b>Atenção:</b> Em smartphones ou tablets, não arraste o slider, toque na posição que desejar.</p>
 
 </div>
 
@@ -13455,4 +13456,40 @@ div#notebook {
 </script>
     </div>
   </div>
+
+<h1 style="margin-left: 5%">Comentários, Dúvidas & Sugestões:</h1>
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://intermat.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<footer class="footer" style="margin-top: 25px;">
+        <div class="container">
+            <div>
+                <p align="center" style="font-family: 'IBM Plex Mono', monospace;">©&nbsp;<a href="https://murilohmoreira.github.io/">Murilo Henrique Moreira</a> – <script language="javascript"> 
+months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+var theDate = new Date(document.lastModified); 
+theDate.setTime((theDate.getTime()+(5000*60*60)) ) 
+theDate.setHours(theDate.getHours() - 5);
+with (theDate) { document.write("Last updated "+getDate()+' '+months[getMonth()]+' '+getFullYear()+' '+ ("0" +getHours()).slice(-2) +':'+("0" +getMinutes()).slice(-2)+" GMT") 
+}
+</script></p>
+            </div>
+        </div>
+    </footer>
 </body>
