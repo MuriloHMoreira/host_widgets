@@ -13102,7 +13102,13 @@ div#notebook {
         .jp-OutputPrompt {
             display: none;
         }
-    </style></head>
+    </style>
+<script>
+  window.onload = function(){
+    document.getElementById('autostart').click();
+}
+</script>
+  </head>
 <body>
 <h1 style="margin-left: 5%;">Widget Para Visualização das Tensões em um Plano Oblíquo:</h1>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
@@ -13112,7 +13118,7 @@ div#notebook {
 
 
   <div class="cell text_cell">
-    <button class="js-nbinteract-widget">
+    <button id="autostart" class="js-nbinteract-widget">
       Loading widgets...
     </button>
   </div>
@@ -13412,7 +13418,7 @@ div#notebook {
 
 
   <div class="output_subarea output_widget_view output_execute_result">
-    <button class="js-nbinteract-widget">
+    <button  style="display: none;" class="js-nbinteract-widget">
       Loading widgets...
     </button>
   </div>
@@ -13458,7 +13464,7 @@ div#notebook {
   </div>
 
 <h1 style="margin-left: 5%">Comentários, Dúvidas & Sugestões:</h1>
-<div id="disqus_thread"></div>
+<div style="margin-left: 5%" id="disqus_thread"></div>
 <script>
     /**
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
