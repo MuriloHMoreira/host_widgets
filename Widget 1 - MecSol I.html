@@ -13368,14 +13368,14 @@ div#notebook {
     <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span><span class="o">=-</span><span class="mf">0.4</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-    ax1.annotate('', xy=(-0.6, -1.1), xytext=(-0.9225, -1.1),
+    <span class="p">ax1.annotate('', xy=(-0.6, -1.1), xytext=(-0.9225, -1.1),
                  arrowprops=dict(facecolor='black', shrink=0.05, width=0.5, headwidth=4, headlength=3), zorder=100)
     ax1.annotate('', xy=(-0.9, -0.8), xytext=(-0.9, -1.12),
                  arrowprops=dict(facecolor='black', shrink=0.05, width=0.5, headwidth=4, headlength=3), zorder=100)
 
     ax1.plot(-0.9, -1.1, 'o', c='k', markersize=4)
     ax1.text(-0.575, -1.12, '$x$', fontsize=12, ha='center', va='center', zorder=100)
-    ax1.text(-0.95, -0.8, '$y$', fontsize=12, ha='center', va='center', zorder=100)
+    ax1.text(-0.95, -0.8, '$y$', fontsize=12, ha='center', va='center', zorder=100)</span>
 
 <span class="n">theta_slider</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\theta$ [°]&#39;</span><span class="p">,</span>
                                    <span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
