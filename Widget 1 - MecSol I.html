@@ -13126,9 +13126,7 @@ div#notebook {
 
 
 
-  
-
-  <div style="display: none;" class="nbinteract-hide_in
+<div class="nbinteract-hide_in
       cell border-box-sizing code_cell rendered">
     <div class="input">
 
@@ -13146,6 +13144,8 @@ div#notebook {
 <span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="o">**</span><span class="p">{</span><span class="s1">&#39;family&#39;</span><span class="p">:</span> <span class="s1">&#39;serif&#39;</span><span class="p">,</span> <span class="s1">&#39;serif&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Computer Modern&#39;</span><span class="p">]})</span>
 <span class="n">rc</span><span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="n">usetex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
+<span class="c1"># params= {&#39;text.latex.preamble&#39; : [r&#39;\usepackage{amsmath}&#39;]}</span>
+<span class="c1"># plt.rcParams.update(params)</span>
 </pre></div>
 
     </div>
@@ -13156,7 +13156,7 @@ div#notebook {
 
   
 
-  <div  style="display: none;" class="nbinteract-hide_in
+  <div class="nbinteract-hide_in
       cell border-box-sizing code_cell rendered">
     <div class="input">
 
@@ -13357,6 +13357,8 @@ div#notebook {
              <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">boxstyle</span><span class="o">=</span><span class="s2">&quot;circle&quot;</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">))</span>
     <span class="n">ax3</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">0.182</span><span class="p">,</span> <span class="mf">0.935</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span>
              <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">boxstyle</span><span class="o">=</span><span class="s2">&quot;circle&quot;</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">))</span>
+
+
     <span class="n">ax1</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xticks</span><span class="o">=</span><span class="p">[],</span> <span class="n">xticklabels</span><span class="o">=</span><span class="p">[],</span> <span class="n">yticks</span><span class="o">=</span><span class="p">[],</span> <span class="n">yticklabels</span><span class="o">=</span><span class="p">[])</span>
     <span class="n">ax2</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xticks</span><span class="o">=</span><span class="p">[],</span> <span class="n">xticklabels</span><span class="o">=</span><span class="p">[],</span> <span class="n">yticks</span><span class="o">=</span><span class="p">[],</span> <span class="n">yticklabels</span><span class="o">=</span><span class="p">[])</span>
     <span class="n">ax3</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xticks</span><span class="o">=</span><span class="p">[],</span> <span class="n">xticklabels</span><span class="o">=</span><span class="p">[],</span> <span class="n">yticks</span><span class="o">=</span><span class="p">[],</span> <span class="n">yticklabels</span><span class="o">=</span><span class="p">[])</span>
@@ -13365,17 +13367,17 @@ div#notebook {
     <span class="c1"># ax3.axis(&#39;off&#39;)</span>
     <span class="n">ax3</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
     <span class="n">ax3</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">.75</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.1</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.9225</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.1</span><span class="p">),</span>
+                 <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">headwidth</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">headlength</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.9</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.8</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.9</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.12</span><span class="p">),</span>
+                 <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">headwidth</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">headlength</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+
+    <span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">-</span><span class="mf">0.9</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.1</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">0.575</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.12</span><span class="p">,</span> <span class="s1">&#39;$x$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">0.95</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;$y$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">wspace</span><span class="o">=-</span><span class="mf">0.4</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-    <span class="p">ax1.annotate('', xy=(-0.6, -1.1), xytext=(-0.9225, -1.1),
-                 arrowprops=dict(facecolor='black', shrink=0.05, width=0.5, headwidth=4, headlength=3), zorder=100)
-    ax1.annotate('', xy=(-0.9, -0.8), xytext=(-0.9, -1.12),
-                 arrowprops=dict(facecolor='black', shrink=0.05, width=0.5, headwidth=4, headlength=3), zorder=100)
-
-    ax1.plot(-0.9, -1.1, 'o', c='k', markersize=4)
-    ax1.text(-0.575, -1.12, '$x$', fontsize=12, ha='center', va='center', zorder=100)
-    ax1.text(-0.95, -0.8, '$y$', fontsize=12, ha='center', va='center', zorder=100)</span>
 
 <span class="n">theta_slider</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\theta$ [°]&#39;</span><span class="p">,</span>
                                    <span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
@@ -13383,21 +13385,19 @@ div#notebook {
                                    <span class="nb">max</span><span class="o">=</span><span class="mi">90</span><span class="p">,</span>
                                    <span class="n">step</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
                                    <span class="n">readout_format</span><span class="o">=</span><span class="s1">&#39;.2f&#39;</span><span class="p">,</span>
-                                   <span class="p">continuous_update=False</span>
-                                   <span class="p">)</span>
+                                   <span class="n">continuous_update</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="n">P_slider</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;P [N]&#39;</span><span class="p">,</span>
-                                   <span class="n">value</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span>
-                                   <span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-                                   <span class="nb">max</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span>
-                                   <span class="n">step</span><span class="o">=</span><span class="mi">1</span></span><span class="p">,</span>
-                                   <span class="p">continuous_update=False</span>
-                                   <span class="p">)</span>
+                             <span class="n">value</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span>
+                             <span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                             <span class="nb">max</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span>
+                             <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                             <span class="n">continuous_update</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
 <span class="n">interactive_plot</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">interactive</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">theta</span><span class="o">=</span><span class="n">theta_slider</span><span class="p">,</span> <span class="n">P</span><span class="o">=</span><span class="n">P_slider</span><span class="p">)</span>
 
 <span class="c1"># theta_slider.layout = widgets.Layout(width=&#39;445px&#39;)</span>
-<span class="n">interactive_plot</span><span class="o">.</span><span class="n">update()</span>
+<span class="n">interactive_plot</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
 
 <span class="n">output</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">VBox</span><span class="p">([</span><span class="n">interactive_plot</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
                       <span class="n">theta_slider</span><span class="p">,</span> <span class="n">P_slider</span><span class="p">])</span>
@@ -13427,7 +13427,6 @@ div#notebook {
 
   <div class="output_subarea output_widget_view output_execute_result">
     <button  style="display: none;" class="js-nbinteract-widget">
-      Loading widgets...
     </button>
   </div>
 
